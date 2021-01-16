@@ -2,11 +2,13 @@
 #include "binary.h"
 
 #include <unordered_map>
+#include <string>
 
 namespace {
 
 using Map = std::unordered_map<char, uint8_t>;
 static Map const sMap = {
+	// numbers
 	{ '0', B01111110 },
 	{ '1', B00110000 },
 	{ '2', B01101101 },
@@ -17,12 +19,17 @@ static Map const sMap = {
 	{ '7', B01110000 },
 	{ '8', B01111111 },
 	{ '9', B01111011 },
+
+	// operators
 	{ '-', B00000001 },
 
+	// literals
 	{ 'r', B00000101 },
-	{ '°', B01100011 },
-	{ '`', B00100000 }, // up
-	{ '´', B00010000 }, // down
+
+	// special symbols
+	{ 'g', B01100011 }, // ° sign
+	{ '>', B00100000 }, // up
+	{ '<', B00010000 }, // down
 };
 
 }

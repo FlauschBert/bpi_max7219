@@ -27,8 +27,9 @@ int main ()
   /* and clear the display */
   lc.clearDisplay(0);
 
-	for (int i = 0; i < 10; ++i)
-		lc.setDigit(0,9-i,toDigit('0'+i, i%2));
+	lc.setDigit(0,7,toDigit('<'));
+	lc.setDigit(0,6,toDigit('>'));
+	lc.setDigit(0,5,toDigit('g'));
 	delay(5000 /*ms*/);
 
   lc.clearDisplay(0);

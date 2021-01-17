@@ -1,25 +1,27 @@
-LedControl
-==========
-LedControl is an [Arduino](http://arduino.cc) library for MAX7219 and MAX7221 Led display drivers.
-The code also works with the [Teensy (3.1)](https://www.pjrc.com/teensy/)
+# MAX7219 on the Banana Pi
 
-Documentation
--------------
-Documentation for the library is on the [Github Project Pages](http://wayoda.github.io/LedControl/)
+7-segment-leds on the MAX7219 on the Banana Pi or Raspberry Pi (not tested).
 
-Download
---------
-The lastest binary version of the Library is always available from the 
-[LedControl Release Page](https://github.com/wayoda/LedControl/releases) 
+# Motivation
 
+Show arbitrary numbers and lettes on the 7-segment-display.
 
-Install
--------
-The library can be installed using the [standard Arduino library install procedure](http://arduino.cc/en/Guide/Libraries)  
+# Compile and install wiringBP library and tools
 
+Clone the [repository](https://github.com/LeMaker/WiringBP) and run `./build`.  
+This installs includes and library in */usr/local/include* and */usr/local/lib*. Binaries in the */usr/local/bin* folder.
 
+# Compile and install
 
+Go to the *source* directory and use the mighty force of shining CMake :D to compile the pico project.  
+The *wiringPi* sub folder contains the internal interface library for the installed wiringBP library.  
+Do `make install` to install the library in */usr/local*.
 
+(I used Armbian stretch but also more recent versions should work).
 
+# References
 
+* [Banana Pi LED test](https://github.com/FlauschBert/bpi_led_test/blob/master/README.md) for initial setup
+* [Documentation of MAX7219](https://datasheets.maximintegrated.com/en/ds/MAX7219-MAX7221.pdf)
+* [LedControl on GitHub](https://github.com/wayoda/LedControl)
 

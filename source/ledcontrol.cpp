@@ -26,7 +26,7 @@
 
 #include <wiringPi.h>
 
-#include "ledcontrol.h"
+#include <ledcontrol.h>
 
 // from Arduino.h
 #define LSBFIRST 0

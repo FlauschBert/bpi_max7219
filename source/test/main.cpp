@@ -1,8 +1,8 @@
 
 #include <wiringPi.h>
-#include "ledcontrol.h"
-#include "digit.h"
-#include "binary.h"
+#include <ledcontrol.h>
+#include <digit.h>
+#include <binary.h>
 
 using namespace ledcontrol;
 

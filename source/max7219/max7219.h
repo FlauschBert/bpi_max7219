@@ -27,7 +27,7 @@
 
 #include <cstdint>
 
-namespace bpi_ledcontrol {
+namespace max7219 {
 
 class MAX7219 {
 		/* The array for shifting the data to the devices */
@@ -102,5 +102,5 @@ class MAX7219 {
 		void setDigit(int device, int digit, uint8_t value);
 };
 
-} // bpi_ledcontrol
+} // max7219
 

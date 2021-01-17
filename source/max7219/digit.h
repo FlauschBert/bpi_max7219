@@ -1,5 +1,5 @@
 #pragma once
-#include <bpi_ledcontrol/binary.h>
+#include <max7219/binary.h>
 
 #include <unordered_map>
 #include <string>
@@ -34,7 +34,7 @@ static Map const sMap = {
 
 }
 
-namespace bpi_ledcontrol {
+namespace max7219 {
 
 inline uint8_t toDigit (char const c, bool dot = false)
 {
@@ -48,5 +48,5 @@ inline uint8_t toDigit (char const c, bool dot = false)
 	}
 }
 
-} // bpi_ledcontrol
+} // max7219
 

@@ -26,7 +26,7 @@
 
 #include <wiringPi.h>
 
-#include <ledcontrol.h>
+#include <bpi_ledcontrol/max7219.h>
 
 // from Arduino.h
 #define LSBFIRST 0
@@ -71,7 +71,7 @@ void shiftOut(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder, uint8_t val)
 
 } // anonymous
 
-namespace ledcontrol {
+namespace bpi_ledcontrol {
 
 MAX7219::MAX7219(int dataPin, int clkPin, int csPin, int numDevices) {
 	SPI_MOSI=dataPin;
@@ -169,5 +169,5 @@ void MAX7219::spiTransfer(int device, volatile uint8_t opcode, volatile uint8_t 
 	digitalWrite(SPI_CS,HIGH);
 }    
 
-} // ledcontrol
+} // bpi_ledcontrol
 

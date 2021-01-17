@@ -1,10 +1,10 @@
 
 #include <wiringPi.h>
-#include <ledcontrol.h>
-#include <digit.h>
-#include <binary.h>
+#include <bpi_ledcontrol/max7219.h>
+#include <bpi_ledcontrol/digit.h>
+#include <bpi_ledcontrol/binary.h>
 
-using namespace ledcontrol;
+using namespace bpi_ledcontrol;
 
 int main ()
 {

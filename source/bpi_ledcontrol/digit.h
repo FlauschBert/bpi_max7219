@@ -1,5 +1,5 @@
 #pragma once
-#include <binary.h>
+#include <bpi_ledcontrol/binary.h>
 
 #include <unordered_map>
 #include <string>
@@ -34,7 +34,7 @@ static Map const sMap = {
 
 }
 
-namespace ledcontrol {
+namespace bpi_ledcontrol {
 
 inline uint8_t toDigit (char const c, bool dot = false)
 {
@@ -48,5 +48,5 @@ inline uint8_t toDigit (char const c, bool dot = false)
 	}
 }
 
-} // ledcontrol
+} // bpi_ledcontrol
 

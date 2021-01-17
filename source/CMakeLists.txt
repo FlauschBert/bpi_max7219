@@ -8,11 +8,11 @@ add_subdirectory(wiringPi)
 
 # add static library
 set (HEADERS
-	ledcontrol.h
-	binary.h
-	digit.h
+	bpi_ledcontrol/max7219.h
+	bpi_ledcontrol/binary.h
+	bpi_ledcontrol/digit.h
 )
-add_library(bpi_ledcontrol STATIC ledcontrol.cpp ${HEADERS})
+add_library(bpi_ledcontrol STATIC max7219.cpp ${HEADERS})
 target_link_libraries(bpi_ledcontrol PUBLIC wiringPi)
 target_include_directories(bpi_ledcontrol PUBLIC ${CMAKE_SOURCE_DIR})
 
@@ -28,5 +28,5 @@ install(
 	ARCHIVE DESTINATION /usr/local/lib
 )
 install(FILES
-	${HEADERS} DESTINATION /usr/local/include
+	${HEADERS} DESTINATION /usr/local/include/bpi_ledcontrol
 )
